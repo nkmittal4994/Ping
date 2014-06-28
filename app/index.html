@@ -68,13 +68,16 @@
     // Create a new window and get it
     var new_win = gui.Window.get(
       window.open('popup.html')
+
     );
 
     // And listen to new window's focus event
     new_win.on('focus', function() {
       console.log('New window is focused');
     });
-
+    //see dis
+    new_win.resizeTo(150,100);
+    new_win.moveTo(880,750);
     var gui = require('nw.gui');
    	var tray = new gui.Tray({ title: 'Tray', icon: 'img/icon.png' });
    	var menu = new gui.Menu();
